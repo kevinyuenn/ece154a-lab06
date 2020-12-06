@@ -4,4 +4,7 @@ $(error You did not define TEST_CACHE!)
 endif
 
 cache-test: cache-test-skel.c $(TEST_CACHE)
-	gcc -Wall $^ -o $@
+	gcc -Wall -m32 $^ -o $@
+
+clean:
+	rm -f cache-test
